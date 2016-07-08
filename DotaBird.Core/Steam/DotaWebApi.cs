@@ -23,7 +23,7 @@ namespace DotaBird.Core.Steam
         public MatchHistory GetMatchHistory(MatchHistoryRequest request)
         {
             logger.Debug("Calling GetMatchHistory with {0}", request);
-            string url = "https://api.steampowered.com/IDOTA2Match_570/GetMatchHistory/V001/?key=A41B14673A53F4C0A5281A6C47637C9E";
+            string url = "https://api.steampowered.com/IDOTA2Match_570/GetMatchHistory/V001/?key=" + KEY;
 
             Uri uri = new Uri(url)
                 .AddQuery("player_name", request.PlayerName)
